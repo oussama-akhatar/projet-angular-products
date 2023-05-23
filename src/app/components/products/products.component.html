@@ -1,0 +1,38 @@
+<div class="p-3">
+  <div class="card">
+    <div class="card-body">
+      <h3>Products Component</h3>
+      <div class="input-group my-2">
+        <input class="form-control" type="text" [(ngModel)]="keyword">
+        <button class="btn btn-outline-success" (click)="searchProducts()"><i class="bi bi-search"></i></button>
+      </div>
+      <table class="table">
+        <thead>
+        <tr>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Checked</th>
+          <th>Delete</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let product of products">
+          <td>{{product.name}}</td>
+          <td>{{product.price | currency:'USD':true}}</td>
+          <td>
+            <button [class]="product.checked?'btn btn-outline-success':'btn btn-outline-danger'"
+                    (click)="handleCheckProduct(product)">
+              <i [class]="product.checked?'bi bi-check':'bi bi-x'"></i>
+            </button>
+          </td>
+          <td>
+            <button (click)="handleDelete(product)" class="btn btn-outline-danger">
+              <i class="bi bi-trash"></i>
+            </button>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

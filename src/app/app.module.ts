@@ -8,6 +8,8 @@ import { ProductsComponent } from './components/products/products.component';
 import { NewProductComponent } from './components/new-product/new-product.component';
 import {AppRoutingModule} from './app-routing.module'
 import {HttpClientModule} from "@angular/common/http";
+import {ProductService} from "./services/product.service";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -20,9 +22,13 @@ import {HttpClientModule} from "@angular/common/http";
     BrowserModule,
     RouterOutlet,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [
+    ProductService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
