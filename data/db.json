@@ -1,28 +1,16 @@
 {
   "products": [
     {
-      "id": 1,
-      "name": "Printer",
-      "price": 3200,
-      "checked": true
-    },
-    {
-      "id": 2,
-      "name": "Printer",
-      "price": 3200,
-      "checked": true
-    },
-    {
       "id": 3,
-      "name": "Printer",
+      "name": "Printer 1",
       "price": 3200,
       "checked": true
     },
     {
-      "name": "Printer",
+      "id": 4,
+      "name": "Printer 2",
       "price": "2300",
-      "checked": true,
-      "id": 4
+      "checked": true
     },
     {
       "name": "Phone",
@@ -35,6 +23,12 @@
       "price": "3400",
       "checked": false,
       "id": 7
+    },
+    {
+      "name": "fzfefzfe",
+      "price": 0,
+      "checked": true,
+      "id": 8
     }
   ]
 }
